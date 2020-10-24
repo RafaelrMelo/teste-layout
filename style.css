@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 70vh;
+    background-image: url("./images/banner.png");
+    background-size: 100% 100%;
+}
+header .cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+header .cont .logo{
+    width: 100px;
+    height: 100px;
+    background-image: url("./images/logo.png");
+    background-size: 100% 100%;
+    margin-bottom: 5%;
+}
+header .cont .texto{
+    width: 50%;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+header .cont button{
+    margin-top: 5%;
+    width: 170px;
+    height: 40px;
+    font-weight: 600;
+    color: rgb(87, 87, 87);
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    transition: 400ms;
+}
+header .cont button:hover{
+    background-color: rgb(190, 189, 189);
+    color: rgb(43, 42, 42);
+}
+main,footer{
+    width: 100%;
+    padding: 3% 8%;
+}
+main .titulo h2,footer .texto h2{ 
+    font-size: 35px;
+    color: rgb(53, 53, 53);
+}
+main .titulo p,footer .texto p{ 
+    font-size: 1em;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+}
+main section{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+main section:last-child{
+    flex-direction: row-reverse;
+}
+main section .single{
+    padding: 3%;
+    background-image: url("./images/mosaico.png");
+    background-size: 100% 100%;
+}
+main section .single:first-child{
+    width: 30%;
+    height: 100%;
+}
+main section .single:last-child{
+    width: 68%;
+    height: 100%;
+}
+main section:nth-child(2) .single{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+main section:nth-child(3) .single:last-child{
+    text-align: right;
+}
+main section .single h2{
+    color: white;
+    font-size: 2.2em;
+    font-weight: 200;
+}
+main section .single p{
+    color: white;
+    font-size: 0.9em;
+}
+footer{
+    width: 100%;
+}
+footer .plans{
+    width: 100%;
+    height: 120px;
+}
+footer .plans .texto{
+    position: relative;
+    top: 35px;
+}
+footer .plans .texto p{
+    font-size: 0.8em;
+}
+footer .plans .plano{
+    position: relative;
+    top: -20px;
+    box-sizing: content-box;
+    display: inline-block;
+    margin-right: -4px;
+    height: 120px;
+    width: 120px;
+    border: 10px solid rgba(0,0,0,0);
+    vertical-align: bottom;
+}
+footer .plano .valor{
+    background-color: rgb(11, 50, 124);
+    color: white;
+    height: 65px;
+    padding: 6% 10%;
+}
+footer .plano .valor h3{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+footer .plano .valor h4{
+    font-size: 0.9em;
+    font-weight: 300;
+}
+footer .plano .descricao{
+    position: relative;
+    height: calc(100% - 65px);
+    background-color: rgb(0, 162, 255);
+    color: white;
+    padding: 8% 10%;
+}
+footer .plano .descricao p{
+    position: absolute;
+    bottom: 8%;
+    font-size: 9px;
+    font-weight: 500;
+}
+footer .plans .plano.dois{
+    height: calc(100% + 40px);
+}
+footer .plans .plano.tres{
+    height: calc(100% + 80px);
+}
+footer .plans .plano.quatro{
+    height: calc(100% + 120px);
+}
+footer .plans .plano.cinco{
+    height: calc(100% + 160px);
+}
+footer .plans .plano.seis{
+    height: calc(100% + 200px);
+}
+@media(max-width:997px){
+    footer .plans .texto{
+        position: static;
+    }
+    footer .plans .plano{
+        position: static
+    }
+}
+@media(max-width:662px){
+    footer .plans{
+        text-align: center;
+    }
+}
+@media(max-width:570px),(max-height:573px){
+    header{
+        height: auto;
+        padding: 2%;
+    }
+    header .cont{
+        padding-top: 0;
+    }
+    header .cont .logo{
+        width: 20vw;
+        height: 20vw;
+    }
+    header .cont .texto{
+        font-size: 10px;
+    }
+    header .cont button{
+        width: 170px;
+        height: 40px;
+    }
+}
+@media(max-width:645px){
+    main .titulo,footer .texto{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    main section{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    main section .single{
+        width: 100%;
+        min-width: 150px;
+        height: auto;
+        min-height: 150px;
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main section .single:first-child{
+        width: 100%;
+        min-width: 150px;
+        height: auto;
+    }
+    main section .single:last-child{
+        width: 100%;
+        min-width: 150px;
+        height: auto;
+    }
+    main section:nth-child(2) .single{
+        width: 100%;
+        min-width: 150px;
+        height: auto;
+        display: flex;
+        text-align: center;
+    }
+    main section:nth-child(3) .single:last-child{
+        text-align: center;
+    }
+}
